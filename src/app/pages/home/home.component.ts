@@ -64,6 +64,8 @@ export class HomeComponent {
 
   }
 
-  public openProject(project: ProjectsInterface): void {}
+  public openProject(project: ProjectsInterface): void {
+    console.log('');
+  }
 
 }
