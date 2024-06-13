@@ -1,0 +1,50 @@
+<div class="home">
+  <div class="home--about-me" id="about">
+    <h1>Sobre mim!</h1>
+    <div class="home--about-me--info">
+      <div class="home--about-me--info--technologies">
+        <ng-container *ngFor="let tec of technologies">
+          <img [src]="tec">
+        </ng-container>
+      </div>
+      <div class="home--about-me--info--description">
+        <img src="assets/images/eu.jpeg">
+        <label>
+          {{ bio }} Onde se pode encontrar os <a (click)="redirectTo('personal')">projetos pessoais</a> e
+          <a (click)="redirectTo('job')">projetos profissionais</a>.
+        </label>
+      </div>
+    </div>
+
+    <a (click)="openProfileModal()">
+      <img class="home--about-me--profile-modal" src="assets/images/degrees.svg"/>
+    </a>
+  </div>
+
+  <div class="home--personal" id="personal">
+    <h1 class="home--personal--title">Projetos pessoais!</h1>
+    <div class="home--personal--info">
+      <ng-container *ngFor="let prj of projects">
+
+        <img [src]="prj.image" alt="">
+
+        <a [href]="prj.link" target="_blank">
+          <h1>{{ prj.name }}</h1>
+        </a>
+        <p>{{ prj.description }}</p>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="home--job" id="job">
+    <h1 class="home--job--title">Projetos profissionais</h1>
+    <div class="home--job--titles">
+      <ng-container *ngFor="let project of projects">
+        <a class="home--job--titles--project" [href]="project.link" target="_blank">
+          {{ project.name }}
+          <img [src]="project.image" alt="">
+        </a>
+      </ng-container>
+    </div>
+  </div>
+</div>
