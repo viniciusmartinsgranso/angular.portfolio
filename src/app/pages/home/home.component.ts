@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, HostListener, Inject } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
 import { ProjectsInterface } from "../../modules/interfaces/projects.interface";
 
@@ -13,6 +13,28 @@ export class HomeComponent {
     @Inject(DOCUMENT)
     private readonly doc: Document,
   ) {}
+
+  @HostListener('window:scroll', ['$event'])
+  private onScroll(): void {
+    this.toggleOnTop();
+  }
+
+  private toggleOnTop(): void {
+    const toTopButton = this.doc.getElementById('toTopBtn');
+
+    if (!toTopButton)
+      return;
+
+    toTopButton.style.display = 'none';
+
+    if (this.doc.body.scrollTop > 100 || this.doc.documentElement.scrollTop > 100)
+      toTopButton.style.display = 'block';
+  }
+
+  public topFunction(): void {
+    this.doc.body.scrollTop = 0;
+    this.doc.documentElement.scrollTop = 0;
+  }
 
   public technologies: string[] = [
     'assets/images/Angular.png', 'assets/images/CSharp.png', 'assets/images/Python.png', 'assets/images/PHP.png', 'assets/images/JS.png', 'assets/images/Jenkins.png', 'assets/images/aws.png'

@@ -1,4 +1,8 @@
 <div class="home">
+  <button (click)="topFunction()" id="toTopBtn" class="redirect-to-top">
+    <img src="assets/images/arrow-up.svg" alt="Para o topo">
+  </button>
+
   <div class="home--about-me" id="about">
     <h1>Sobre mim!</h1>
     <div class="home--about-me--info">
@@ -23,17 +27,16 @@
 
   <div class="home--personal" id="personal">
     <h1 class="home--personal--title">Projetos pessoais!</h1>
-    <div class="home--personal--info">
-      <ng-container *ngFor="let prj of projects">
-
+    <ng-container *ngFor="let prj of projects">
+      <div class="home--personal--info">
         <img [src]="prj.image" alt="">
 
         <a [href]="prj.link" target="_blank">
           <h1>{{ prj.name }}</h1>
         </a>
         <p>{{ prj.description }}</p>
-      </ng-container>
-    </div>
+      </div>
+    </ng-container>
   </div>
 
   <div class="home--job" id="job">

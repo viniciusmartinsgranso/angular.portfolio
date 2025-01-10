@@ -23,12 +23,22 @@ export class NavbarComponent {
       link: '/home#job',
       name: 'Projetos profissionais'
     },
+    {
+      link: '/home#contact',
+      name: 'Contato'
+    },
+    {
+      link: '/home#curriculum',
+      name: 'Currículo'
+    },
   ];
 
   public isNavbarOpen: boolean = false;
 
   public toggleNavbar(): void {
     this.isNavbarOpen = !this.isNavbarOpen;
+
+    console.log(this.isNavbarOpen);
   }
 
   public closeNavbar(): void {

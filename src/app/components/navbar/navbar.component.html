@@ -1,17 +1,19 @@
 <div class="navbar">
   <div class="navbar--items">
-    <h1>Vinícius Martins</h1>
     <button class="navbar--items--menu-toggle" (click)="toggleNavbar()">☰</button>
+    <h1>Vinícius Martins</h1>
     <div class="navbar--items--pc-options">
       <ng-container *ngFor="let item of navbarList">
         <a [href]="item.link" (click)="closeNavbar()">{{ item.name }}</a>
       </ng-container>
     </div>
+  </div>
+</div>
 
-    <div class="navbar--mob-options--open" [class.navbar--items--mob-options--open]="isNavbarOpen" >
-      <ng-container *ngFor="let item of navbarList">
-        <a [href]="item.link" (click)="closeNavbar()">{{ item.name }}</a>
-      </ng-container>
-    </div>
+<div class="nav-open" [class.nav-closed]="isNavbarOpen">
+  <div class="nav-open--items">
+    <ng-container *ngFor="let item of navbarList">
+      <a [href]="item.link" (click)="closeNavbar()">{{ item.name }}</a>
+    </ng-container>
   </div>
 </div>
