@@ -1,0 +1,29 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+
+  img {
+    border-radius: 1rem;
+    transition: all .2s ease-in-out;
+    width: 10rem;
+    height: 10rem;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &--techs {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    label {
+      background: #301aa1;
+      padding: .2rem 1rem;
+      border-radius: 1rem;
+    }
+  }
+}

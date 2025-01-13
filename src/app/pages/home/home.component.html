@@ -1,53 +1,72 @@
 <div class="home">
-  <button (click)="topFunction()" id="toTopBtn" class="redirect-to-top">
+  <button (click)="topFunction()" id="btnRedirectTop" class="redirect-to-top">
     <img src="assets/images/arrow-up.svg" alt="Para o topo">
   </button>
 
   <div class="home--about-me" id="about">
     <h1>Sobre mim!</h1>
     <div class="home--about-me--info">
-      <div class="home--about-me--info--technologies">
-        <ng-container *ngFor="let tec of technologies">
-          <img [src]="tec">
-        </ng-container>
-      </div>
       <div class="home--about-me--info--description">
-        <img src="assets/images/eu.jpeg">
+        <img class="home--about-me--info--description--me" src="assets/images/eu.jpeg">
         <label>
-          {{ bio }} Onde se pode encontrar os <a (click)="redirectTo('personal')">projetos pessoais</a> e
-          <a (click)="redirectTo('job')">projetos profissionais</a>.
+          Sou Engenheiro de Software Full Stack com mais de 3 anos de experiência, formado em Análise e Desenvolvimento
+          de Sistemas pela ESAMC - Sorocaba e cursando Engenharia da Computação pelo Centro Universitário Facens.
+          Ao longo da minha carreira já participei em projetos de diversos setores como educação, agricultura e
+          digitalização de manufatura.
+          Utilizando tecnologias como Angular, NestJS, React, C#, Jenkins e AWS participei de mais de 10 projetos com
+          foco em entregar soluções robustas e inovadoras.
+        </label>
+
+        <label>
+          Atualmente, estou trabalhando no LIGA - FACENS, uma Software House localizada em Sorocaba, São Paulo - Brasil,
+          onde estou aprendendo e me esforçando para criar soluções inovadoras com expertise e grandes resultados.
         </label>
       </div>
+
+      <div class="home--about-me--info--technologies">
+        <label>
+          Sendo motivado constantemente em criar soluções e mudar a vida das pessoas, essas são algumas das tecnologias que já trabalhei:
+        </label>
+        <div class="home--about-me--info--technologies--list">
+          <ng-container *ngFor="let tec of technologies">
+            <img [src]="tec">
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home--project" id="projects">
+    <div class="home--project--header">
+      <h1 class="home--project--header--title">Projetos!</h1>
+      <label>Todos os projetos que já participei.</label>
     </div>
 
-    <a (click)="openProfileModal()">
-      <img class="home--about-me--profile-modal" src="assets/images/degrees.svg"/>
-    </a>
-  </div>
+    <div class="home--project--filter">
+      <ng-container *ngFor="let type of listProjectType">
+        <div class="home--project--filter--item" [class.active]="selectedProjectFilter === type"
+             (click)="filterProjectByType(type)">
+          <span>{{ translatedProjectTypes[type] }}</span>
+        </div>
+      </ng-container>
+    </div>
 
-  <div class="home--personal" id="personal">
-    <h1 class="home--personal--title">Projetos pessoais!</h1>
-    <ng-container *ngFor="let prj of projects">
-      <div class="home--personal--info">
-        <img [src]="prj.image" alt="">
-
-        <a [href]="prj.link" target="_blank">
-          <h1>{{ prj.name }}</h1>
-        </a>
-        <p>{{ prj.description }}</p>
-      </div>
-    </ng-container>
-  </div>
-
-  <div class="home--job" id="job">
-    <h1 class="home--job--title">Projetos profissionais</h1>
-    <div class="home--job--titles">
-      <ng-container *ngFor="let project of projects">
-        <a class="home--job--titles--project" [href]="project.link" target="_blank">
-          {{ project.name }}
-          <img [src]="project.image" alt="">
-        </a>
+    <div class="home--project--list">
+      <ng-container *ngFor="let prj of projectsFiltered">
+        <app-project-card [project]="prj"/>
       </ng-container>
     </div>
   </div>
+
+  <!--  <div class="home&#45;&#45;job" id="job">-->
+  <!--    <h1 class="home&#45;&#45;job&#45;&#45;title">Projetos profissionais</h1>-->
+  <!--    <div class="home&#45;&#45;job&#45;&#45;titles">-->
+  <!--      <ng-container *ngFor="let project of personalProjects">-->
+  <!--        <a class="home&#45;&#45;job&#45;&#45;titles&#45;&#45;project" [href]="project.link" target="_blank">-->
+  <!--          {{ project.name }}-->
+  <!--          <img [src]="project.image" alt="">-->
+  <!--        </a>-->
+  <!--      </ng-container>-->
+  <!--    </div>-->
+  <!--  </div>-->
 </div>

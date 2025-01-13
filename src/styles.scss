@@ -52,3 +52,67 @@ a {
     transform: scale(1.05);
   }
 }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--dark-purple);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 60vw;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: .8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--grey-purple);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--darkest-purple);
+    outline: 1px solid slategrey;
+    border-radius: 2rem;
+  }
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+  width: .8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--grey-purple);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--darkest-purple);
+  outline: 1px solid slategrey;
+  border-radius: 2rem;
+}

@@ -1,5 +1,4 @@
 .navbar {
-  width: 100vw;
   padding: 1rem;
   background: var(--dark-purple);
 
@@ -59,17 +58,18 @@
   z-index: 3;
   position: absolute;
   left: 0;
-  border: 0.1rem solid grey;
+  border: 0.1rem solid #555555;
   border-left: 0;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
+  border-radius: 0 0 2rem 0;
 
   &--items {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     justify-content: center;
     text-align: center;
     height: 100%;

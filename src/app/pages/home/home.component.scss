@@ -3,7 +3,7 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 8rem;
 
   &--about-me {
     background: var(--grey-purple);
@@ -11,6 +11,7 @@
     border-radius: 1rem;
     position: relative;
     color: white;
+    margin-bottom: 2rem;
 
     h1 {
       font-weight: bold;
@@ -22,17 +23,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      gap: 8rem;
+      margin-top: 2rem;
 
       &--technologies {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 1.6rem;
 
-        img {
-          width: 4rem;
-          margin: .5rem;
+        &--list {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 2rem;
+          width: 30vw;
+
+          img {
+            width: 4rem;
+            margin: .5rem;
+          }
         }
       }
 
@@ -43,11 +55,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
-        font-size: 1.3rem;
+        gap: 4rem;
+        font-size: 1.8rem;
+        flex-direction: column;
 
         @media screen and (max-width: 768px) {
           flex-direction: column;
+        }
+
+        &--me {
+          width: 5rem;
+          height: 5rem;
+          object-fit: cover;
+          border-radius: 100%;
         }
 
         label {
@@ -58,84 +78,56 @@
             color: #428cff;
           }
         }
+      }
+    }
+  }
 
-        img {
-          width: 5rem;
-          height: 5rem;
-          object-fit: cover;
-          border-radius: 100%;
-        }
+  &--project {
+    background: var(--grey-purple);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+
+    &--header {
+      border-bottom: 0.1rem solid grey;
+
+      &--title {
+        font-weight: bold;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
       }
     }
 
-    &--profile-modal {
-      position: absolute;
-      right: 3rem;
-      background: rgb(15 1 135);
-      border-radius: 100%;
-      width: 3.5rem;
-      height: 3.5rem;
-      padding: .5rem;
-    }
-  }
+    &--filter {
+      display: flex;
+      gap: 1.3rem;
+      margin: 1rem 0;
 
-  &--personal {
-    background: var(--grey-purple);
-    padding: 2rem;
-    border-radius: 1rem;
-
-    &--title {
-      font-weight: bold;
-      border-bottom: 0.1rem solid grey;
-      padding-bottom: 1rem;
+      &--item {
+        padding: .7rem;
+        background: var(--darkest-purple);
+        border-radius: .8rem;
+        cursor: pointer;
+      }
     }
 
-    &--info {
-      font-size: 1.2rem;
-      border-bottom: 0.1rem solid grey;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
-    }
-  }
-
-  &--job {
-    background: var(--grey-purple);
-    padding: 2rem;
-    border-radius: 1rem;
-
-    &--title {
-      font-weight: bold;
-      border-bottom: 0.1rem solid grey;
-      padding-bottom: 1rem;
-    }
-
-    &--titles {
+    &--list {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      gap: 2rem;
       flex-wrap: wrap;
-
-      &--project {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-
-        img {
-          width: 4rem;
-          height: 4rem;
-          border-radius: 100%;
-        }
-      }
+      gap: 7rem;
     }
   }
-
 }
 
-.home--about-me--info, .home--about-me--info--description {
+.active {
+  background: var(--dark-purple);
+}
+
+.home--about-me--info, .home--about-me--info--technologies--list {
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
+    width: 100%;
   }
 }

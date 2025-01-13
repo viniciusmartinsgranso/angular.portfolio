@@ -1,6 +1,10 @@
-import { Component, HostListener, Inject } from '@angular/core';
+import { Component, HostListener, inject, Inject } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
-import { ProjectsInterface } from "../../modules/interfaces/projects.interface";
+import { ProjectInterface } from "../../modules/interfaces/project.interface";
+import { projects } from "../../modules/mocks/projects";
+import { technologiesMock } from "../../modules/mocks/technologies.mock";
+import { ModalService } from "../../services/modal.service";
+import { ProjectTypeEnum, translatedProjectTypes } from "../../modules/enums/project-type.enum";
 
 @Component({
   selector: 'app-home',
@@ -14,21 +18,36 @@ export class HomeComponent {
     private readonly doc: Document,
   ) {}
 
-  @HostListener('window:scroll', ['$event'])
-  private onScroll(): void {
-    this.toggleOnTop();
+  //#region Injectable
+
+  private readonly modalService: ModalService = inject(ModalService);
+
+  //#endregion
+
+  //#region Public Properties
+
+  public technologies: string[] = technologiesMock;
+
+  public projects: ProjectInterface[] = projects;
+
+  public projectsFiltered: ProjectInterface[] = projects;
+
+  public listProjectType: ProjectTypeEnum[] = Object.values(ProjectTypeEnum);
+
+  public translatedProjectTypes: Record<ProjectTypeEnum, string> = translatedProjectTypes;
+
+  public selectedProjectFilter: ProjectTypeEnum = ProjectTypeEnum.ALL;
+
+  //#endregion
+
+  //#region Public Methods
+
+  public async redirectTo(route: string): Promise<void> {
+    this.doc.getElementById(route)?.scrollIntoView();
   }
 
-  private toggleOnTop(): void {
-    const toTopButton = this.doc.getElementById('toTopBtn');
-
-    if (!toTopButton)
-      return;
-
-    toTopButton.style.display = 'none';
-
-    if (this.doc.body.scrollTop > 100 || this.doc.documentElement.scrollTop > 100)
-      toTopButton.style.display = 'block';
+  public openProject(project: ProjectInterface): void {
+    console.log('');
   }
 
   public topFunction(): void {
@@ -36,58 +55,37 @@ export class HomeComponent {
     this.doc.documentElement.scrollTop = 0;
   }
 
-  public technologies: string[] = [
-    'assets/images/Angular.png', 'assets/images/CSharp.png', 'assets/images/Python.png', 'assets/images/PHP.png', 'assets/images/JS.png', 'assets/images/Jenkins.png', 'assets/images/aws.png'
-  ];
+  public filterProjectByType(type: ProjectTypeEnum): void {
+    this.selectedProjectFilter = type;
 
-  public bio: string = 'Olá! Sou o Vinícius Martins Granso e atualmente trabalho com desenvolvimento WEB, sendo utilizado Angular Framework para criação de sites e aplicativos. ' +
-    'Atualmente possuo 3 anos no LIGA - FACENS já fiz parte do desenvolvimento de alguns projetos tanto mobile quanto WEB.';
-
-  public projects: ProjectsInterface[] = [
-    {
-      name: 'Be Green',
-      link: 'https://be-green-upx.vercel.app',
-      image: 'assets/images/Gengar.jpg',
-      description: 'Projeto acadêmico realizado para a matéria de UPX - Engenharia Contemporânea.\n' +
-        '\n' +
-        'Que tem como objetivo a inclusão da sociedade nas informações sobre reciclagem, pontos de coleta, formas de reciclar, o que fazer com seus objetos que são considerados \'lixos\' e como reutilizá-los, além de receber pontos em troca de fazer o bem!\n' +
-        'Realizando assim todo um ecossistema sustentabilidade na palma da sua mão.\n' +
-        '\n' +
-        'Aplicativo feito em Ionic com Angular Framework e atualmente com dados mockados, sendo utilizado o localstorage para o alocamento de informações.'
-    },
-    {
-      name: 'Help Us',
-      link: 'https://help-us.vercel.app',
-      image: 'assets/images/Gengar.jpg',
-      description: 'Projeto acadêmico realizado para a matéria de UPX - Engenharia Criativa, o App Help Us!\n' +
-        'Que tem como objetivo a sociedade compartilhar informações entre a própria sociedade sobre ocorrências da cidade, como incêndios, desmoronamentos e batidas de trânsito.\n' +
-        '\n' +
-        'Aplicativo feito em Ionic com Angular Framework e atualmente com dados mockados, sendo utilizado o localstorage para o alocamento de informações.'
-    },
-    {
-      name: 'Vinimail',
-      link: 'https://github.com/viniciusmartinsgranso/email/',
-      image: 'assets/images/Gengar.jpg',
-      description: 'Descrição'
-    },
-    {
-      name: 'Post-It',
-      link: 'https://post-it-vini.vercel.app',
-      description: 'Projeto criado durante o Bootcamp do LIGA - FACENS no período de 2022.',
-      image: 'assets/images/Gengar.jpg',
+    if (type === ProjectTypeEnum.ALL) {
+      this.projectsFiltered = this.projects;
+    } else {
+      this.projectsFiltered = this.projects.filter(project => project.type === type);
     }
-  ];
-
-  public async redirectTo(route: string): Promise<void> {
-    this.doc.getElementById(route)?.scrollIntoView();
   }
 
-  public openProfileModal(): void {
+  //#endregion
 
+  //#region Private Methods
+
+  @HostListener('window:scroll', ['$event'])
+  private onScroll(): void {
+    this.toggleOnTop();
   }
 
-  public openProject(project: ProjectsInterface): void {
-    console.log('');
+  private toggleOnTop(): void {
+    const redirectToTop = this.doc.getElementById('btnRedirectTop');
+
+    if (!redirectToTop)
+      return;
+
+    redirectToTop.style.display = 'none';
+
+    if (this.doc.body.scrollTop > 100 || this.doc.documentElement.scrollTop > 100)
+      redirectToTop.style.display = 'block';
   }
+
+  //#endregion
 
 }

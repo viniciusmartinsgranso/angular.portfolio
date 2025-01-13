@@ -1,0 +1,11 @@
+<div class="project-card">
+  <img [src]="project.image" alt="Imagem do projeto">
+
+  <h1>{{ project.name }}</h1>
+
+  <div class="project-card--techs">
+    <ng-container *ngFor="let tech of project.techs">
+      <label>{{ tech }}</label>
+    </ng-container>
+  </div>
+</div>

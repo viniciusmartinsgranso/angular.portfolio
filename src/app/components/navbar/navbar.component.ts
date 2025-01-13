@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavbarInterface } from "../../modules/interfaces/navbar.interface";
+import { ModalService } from "../../services/modal.service";
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { NavbarInterface } from "../../modules/interfaces/navbar.interface";
 })
 export class NavbarComponent {
 
-  constructor() { }
+  //#region Public Properties
 
   public navbarList: NavbarInterface[] = [
     {
@@ -16,33 +17,29 @@ export class NavbarComponent {
       name: 'Sobre mim'
     },
     {
-      link: '/home#personal',
-      name: 'Projetos pessoais'
-    },
-    {
-      link: '/home#job',
-      name: 'Projetos profissionais'
+      link: '/home#projects',
+      name: 'Projetos'
     },
     {
       link: '/home#contact',
       name: 'Contato'
     },
-    {
-      link: '/home#curriculum',
-      name: 'Currículo'
-    },
   ];
 
   public isNavbarOpen: boolean = false;
 
+  //#endregion
+
+  //#Region Public Methods
+
   public toggleNavbar(): void {
     this.isNavbarOpen = !this.isNavbarOpen;
-
-    console.log(this.isNavbarOpen);
   }
 
   public closeNavbar(): void {
     this.isNavbarOpen = false;
   }
+
+  //#endregion
 
 }
