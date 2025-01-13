@@ -9,6 +9,12 @@ import { ModalService } from "../../services/modal.service";
 })
 export class NavbarComponent {
 
+  //#region Injectable Properties
+
+  private readonly modalService: ModalService = inject(ModalService);
+
+  //#endregion
+
   //#region Public Properties
 
   public navbarList: NavbarInterface[] = [
@@ -19,10 +25,6 @@ export class NavbarComponent {
     {
       link: '/home#projects',
       name: 'Projetos'
-    },
-    {
-      link: '/home#contact',
-      name: 'Contato'
     },
   ];
 
@@ -38,6 +40,9 @@ export class NavbarComponent {
 
   public closeNavbar(): void {
     this.isNavbarOpen = false;
+  }
+
+  public openContactModal(): void {
   }
 
   //#endregion

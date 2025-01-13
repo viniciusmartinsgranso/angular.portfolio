@@ -1,7 +1,7 @@
 <div class="navbar">
   <div class="navbar--items">
     <button class="navbar--items--menu-toggle" (click)="toggleNavbar()">☰</button>
-    <h1>Vinícius Martins</h1>
+    <h1>Vinícius Martins Granso</h1>
     <div class="navbar--items--pc-options">
       <ng-container *ngFor="let item of navbarList">
         <a [href]="item.link" (click)="closeNavbar()">{{ item.name }}</a>
@@ -16,6 +16,7 @@
     <ng-container *ngFor="let item of navbarList">
       <a [href]="item.link" (click)="closeNavbar()">{{ item.name }}</a>
     </ng-container>
+    <a (click)="openContactModal()">Contato</a>
     <a href="assets/docs/Curriculo-Vinicius-Martins.pdf" download>Currículo</a>
   </div>
 </div>
