@@ -50,9 +50,6 @@ export class HomeComponent {
   @ViewChild('swiper', { static: false })
   public swiper!: ElementRef<SwiperContainer>;
 
-  @ViewChild('pagination')
-  public pagination!: ElementRef<HTMLElement>;
-
   //#endregion
 
   //#region Public Properties
