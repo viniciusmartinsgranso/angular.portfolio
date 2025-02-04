@@ -25,7 +25,8 @@
 
       <div class="home--about-me--info--technologies">
         <label>
-          Sendo motivado constantemente em criar soluções e mudar a vida das pessoas, essas são algumas das tecnologias que já trabalhei:
+          Sendo motivado constantemente em criar soluções e mudar a vida das pessoas, essas são algumas das tecnologias
+          que já trabalhei:
         </label>
         <div class="home--about-me--info--technologies--list">
           <ng-container *ngFor="let tec of technologies">
@@ -52,21 +53,16 @@
     </div>
 
     <div class="home--project--list">
-      <ng-container *ngFor="let prj of projectsFiltered">
-        <app-project-card [project]="prj"/>
-      </ng-container>
+      <swiper-container #swiper>
+        <ng-container *ngFor="let prj of projectsFiltered">
+          <swiper-slide>
+            <app-project-card [project]="prj"></app-project-card>
+          </swiper-slide>
+        </ng-container>
+      </swiper-container>
+
+      <button class="home--project--list--left" (click)="changeSlide(-1)"><</button>
+      <button class="home--project--list--right" (click)="changeSlide(1)">></button>
     </div>
   </div>
-
-  <!--  <div class="home&#45;&#45;job" id="job">-->
-  <!--    <h1 class="home&#45;&#45;job&#45;&#45;title">Projetos profissionais</h1>-->
-  <!--    <div class="home&#45;&#45;job&#45;&#45;titles">-->
-  <!--      <ng-container *ngFor="let project of personalProjects">-->
-  <!--        <a class="home&#45;&#45;job&#45;&#45;titles&#45;&#45;project" [href]="project.link" target="_blank">-->
-  <!--          {{ project.name }}-->
-  <!--          <img [src]="project.image" alt="">-->
-  <!--        </a>-->
-  <!--      </ng-container>-->
-  <!--    </div>-->
-  <!--  </div>-->
 </div>

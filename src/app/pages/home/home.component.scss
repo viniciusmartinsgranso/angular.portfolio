@@ -3,12 +3,11 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 15rem;
 
   &--about-me {
     position: relative;
     color: white;
-    margin-bottom: 2rem;
 
     h1 {
       font-weight: bold;
@@ -110,11 +109,25 @@
     }
 
     &--list {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      gap: 7rem;
+      position: relative;
+
+      &--right, &--left {
+        background: none;
+        position: absolute;
+        bottom: 50%;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 1.3rem;
+      }
+
+      &--right {
+        right: 1rem;
+      }
+
+      &--left {
+        left: 1rem;
+      }
     }
   }
 }

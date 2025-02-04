@@ -1,10 +1,21 @@
-import { Component, HostListener, inject, Inject } from '@angular/core';
+import {
+  Component,
+  effect,
+  ElementRef,
+  HostListener,
+  inject,
+  Inject,
+  ViewChild
+} from '@angular/core';
 import { DOCUMENT } from "@angular/common";
 import { ProjectInterface } from "../../modules/interfaces/project.interface";
 import { projects } from "../../modules/mocks/projects";
 import { technologiesMock } from "../../modules/mocks/technologies.mock";
 import { ModalService } from "../../services/modal.service";
 import { ProjectTypeEnum, translatedProjectTypes } from "../../modules/enums/project-type.enum";
+import { SwiperOptions } from "swiper/types";
+import { SwiperContainer } from "swiper/swiper-element";
+import { DeviceDetectorService } from "../../services/device-detector.service";
 
 @Component({
   selector: 'app-home',
@@ -16,11 +27,31 @@ export class HomeComponent {
   constructor(
     @Inject(DOCUMENT)
     private readonly doc: Document,
-  ) {}
+  ) {
+    effect(() => {
+      const swiperElement = this.swiper.nativeElement;
+      console.log(swiperElement)
+
+      Object.assign(swiperElement, this.slideConfig);
+      swiperElement.initialize();
+    });
+  }
 
   //#region Injectable
 
   private readonly modalService: ModalService = inject(ModalService);
+
+  private readonly deviceDetectorService: DeviceDetectorService = inject(DeviceDetectorService);
+
+  //#endregion
+
+  //#regio Private Properties
+
+  @ViewChild('swiper', { static: false })
+  public swiper!: ElementRef<SwiperContainer>;
+
+  @ViewChild('pagination')
+  public pagination!: ElementRef<HTMLElement>;
 
   //#endregion
 
@@ -37,6 +68,12 @@ export class HomeComponent {
   public translatedProjectTypes: Record<ProjectTypeEnum, string> = translatedProjectTypes;
 
   public selectedProjectFilter: ProjectTypeEnum = ProjectTypeEnum.ALL;
+
+  public slideConfig: SwiperOptions = {
+    slidesPerView: this.deviceDetectorService.isMobile() ? 1 : 3,
+    autoplay: true,
+    loop: true,
+  };
 
   //#endregion
 
@@ -62,6 +99,14 @@ export class HomeComponent {
       this.projectsFiltered = this.projects;
     } else {
       this.projectsFiltered = this.projects.filter(project => project.type === type);
+    }
+  }
+
+  public changeSlide(prevOrNext: number): void {
+    if (prevOrNext === -1) {
+      this.swiper.nativeElement.swiper.slidePrev();
+    } else {
+      this.swiper.nativeElement.swiper.slideNext();
     }
   }
 
