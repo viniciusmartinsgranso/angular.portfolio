@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from "@angular/router";
 import { ProjectCardModule } from "../../components/project-card/project-card.module";
+import { TranslatePipe } from "@ngx-translate/core";
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     ProjectCardModule,
+    TranslatePipe,
   ],
   exports: [
     HomeComponent

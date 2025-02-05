@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from './navbar.component';
+import { TranslatePipe } from "@ngx-translate/core";
+import { FormsModule } from "@angular/forms";
 
 
 
@@ -12,6 +14,8 @@ import { NavbarComponent } from './navbar.component';
   imports: [
     CommonModule,
     RouterLink,
+    TranslatePipe,
+    FormsModule,
   ],
   exports: [
     NavbarComponent

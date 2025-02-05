@@ -12,7 +12,7 @@ import { ProjectInterface } from "../../modules/interfaces/project.interface";
 import { projects } from "../../modules/mocks/projects";
 import { technologiesMock } from "../../modules/mocks/technologies.mock";
 import { ModalService } from "../../services/modal.service";
-import { ProjectTypeEnum, translatedProjectTypes } from "../../modules/enums/project-type.enum";
+import { ProjectTypeEnum } from "../../modules/enums/project-type.enum";
 import { SwiperOptions } from "swiper/types";
 import { SwiperContainer } from "swiper/swiper-element";
 import { DeviceDetectorService } from "../../services/device-detector.service";
@@ -30,7 +30,6 @@ export class HomeComponent {
   ) {
     effect(() => {
       const swiperElement = this.swiper.nativeElement;
-      console.log(swiperElement)
 
       Object.assign(swiperElement, this.slideConfig);
       swiperElement.initialize();
@@ -61,8 +60,6 @@ export class HomeComponent {
   public projectsFiltered: ProjectInterface[] = projects;
 
   public listProjectType: ProjectTypeEnum[] = Object.values(ProjectTypeEnum);
-
-  public translatedProjectTypes: Record<ProjectTypeEnum, string> = translatedProjectTypes;
 
   public selectedProjectFilter: ProjectTypeEnum = ProjectTypeEnum.ALL;
 

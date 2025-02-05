@@ -1,17 +1,20 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { NavbarInterface } from "../../modules/interfaces/navbar.interface";
 import { ModalService } from "../../services/modal.service";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
 
   //#region Injectable Properties
 
   private readonly modalService: ModalService = inject(ModalService);
+
+  private readonly translateService: TranslateService = inject(TranslateService);
 
   //#endregion
 
@@ -20,19 +23,25 @@ export class NavbarComponent {
   public navbarList: NavbarInterface[] = [
     {
       link: '/home#about',
-      name: 'Sobre mim'
+      name: 'ABOUT-ME'
     },
     {
       link: '/home#projects',
-      name: 'Projetos'
+      name: 'PROJECTS'
     },
   ];
 
   public isNavbarOpen: boolean = false;
 
+  public selectedLanguage: string = '';
+
   //#endregion
 
   //#Region Public Methods
+
+  public ngOnInit(): void {
+    this.selectedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+  }
 
   public toggleNavbar(): void {
     this.isNavbarOpen = !this.isNavbarOpen;
@@ -43,6 +52,10 @@ export class NavbarComponent {
   }
 
   public openContactModal(): void {
+  }
+
+  public onChangeLanguage(language: string): void {
+    this.translateService.use(language);
   }
 
   //#endregion

@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class DeviceDetectorService {
 
-  isMobile(): boolean {
+  public isMobile(): boolean {
     const userAgent = window.navigator.userAgent.toLowerCase();
     return /mobile|android|iphone|ipad|ipod|blackberry|windows phone/.test(userAgent);
   }
 
-  isDesktop(): boolean {
+  public isDesktop(): boolean {
     return !this.isMobile();
   }
 

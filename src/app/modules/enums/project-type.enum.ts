@@ -5,7 +5,7 @@ export enum ProjectTypeEnum {
 }
 
 export const translatedProjectTypes: Record<ProjectTypeEnum, string> = {
-  [ProjectTypeEnum.ALL]: 'Todos',
-  [ProjectTypeEnum.PERSONAL]: 'Pessoais',
-  [ProjectTypeEnum.PROFESSIONAL]: 'Profissionais',
+  [ProjectTypeEnum.ALL]: 'ALL',
+  [ProjectTypeEnum.PERSONAL]: 'PERSONAL',
+  [ProjectTypeEnum.PROFESSIONAL]: 'PROFESSIONAL',
 }

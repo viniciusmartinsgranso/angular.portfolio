@@ -4,33 +4,26 @@
   </button>
 
   <div class="home--about-me" id="about">
-    <h1>Sobre mim!</h1>
+    <h1>{{ 'ABOUT-ME' | translate }}</h1>
     <div class="home--about-me--info">
       <div class="home--about-me--info--description">
         <img class="home--about-me--info--description--me" src="assets/images/eu.jpeg">
         <label>
-          Sou Engenheiro de Software Full Stack com mais de 3 anos de experiência, formado em Análise e Desenvolvimento
-          de Sistemas pela ESAMC - Sorocaba e cursando Engenharia da Computação pelo Centro Universitário Facens.
-          Ao longo da minha carreira já participei em projetos de diversos setores como educação, agricultura e
-          digitalização de manufatura.
-          Utilizando tecnologias como Angular, NestJS, React, C#, Jenkins e AWS participei de mais de 10 projetos com
-          foco em entregar soluções robustas e inovadoras.
+          {{ 'ABOUT-ONE' | translate }}
         </label>
 
         <label>
-          Atualmente, estou trabalhando no LIGA - FACENS, uma Software House localizada em Sorocaba, São Paulo - Brasil,
-          onde estou aprendendo e me esforçando para criar soluções inovadoras com expertise e grandes resultados.
+          {{ 'ABOUT-TWO' | translate }}
         </label>
       </div>
 
       <div class="home--about-me--info--technologies">
         <label>
-          Sendo motivado constantemente em criar soluções e mudar a vida das pessoas, essas são algumas das tecnologias
-          que já trabalhei:
+          {{ 'TECHNOLOGIES' | translate }}
         </label>
         <div class="home--about-me--info--technologies--list">
           <ng-container *ngFor="let tec of technologies">
-            <img [src]="tec">
+            <img [src]="tec" alt="">
           </ng-container>
         </div>
       </div>
@@ -39,15 +32,15 @@
 
   <div class="home--project" id="projects">
     <div class="home--project--header">
-      <h1 class="home--project--header--title">Projetos!</h1>
-      <label>Todos os projetos que já participei.</label>
+      <h1 class="home--project--header--title">{{ 'PROJECTS' | translate }}!</h1>
+      <label>{{ 'WORKED-PROJECTS' | translate }}</label>
     </div>
 
     <div class="home--project--filter">
       <ng-container *ngFor="let type of listProjectType">
         <div class="home--project--filter--item" [class.active]="selectedProjectFilter === type"
              (click)="filterProjectByType(type)">
-          <span>{{ translatedProjectTypes[type] }}</span>
+          <span>{{ type | translate }}</span>
         </div>
       </ng-container>
     </div>

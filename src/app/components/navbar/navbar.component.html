@@ -4,9 +4,17 @@
     <h1>Vinícius Martins Granso</h1>
     <div class="navbar--items--pc-options">
       <ng-container *ngFor="let item of navbarList">
-        <a [href]="item.link" (click)="closeNavbar()">{{ item.name }}</a>
+        <a [href]="item.link" (click)="closeNavbar()">{{ item.name | translate }}</a>
       </ng-container>
-      <a href="assets/docs/Curriculo-Vinicius-Martins.pdf" download>Currículo</a>
+      <a href="assets/docs/Curriculo-Vinicius-Martins.pdf" download>{{ 'CURRICULUM' | translate }}</a>
+      <select class="navbar--items--pc-options--translate"
+              [(ngModel)]="selectedLanguage"
+              (ngModelChange)="onChangeLanguage($event)"
+              name="language"
+              id="language-select">
+        <option value="en">en-US</option>
+        <option value="pt">pt-BR</option>
+      </select>
     </div>
   </div>
 </div>
@@ -14,9 +22,17 @@
 <div class="nav-open" [class.nav-closed]="isNavbarOpen">
   <div class="nav-open--items">
     <ng-container *ngFor="let item of navbarList">
-      <a [href]="item.link" (click)="closeNavbar()">{{ item.name }}</a>
+      <a [href]="item.link" (click)="closeNavbar()">{{ item.name | translate }}</a>
     </ng-container>
-    <a (click)="openContactModal()">Contato</a>
-    <a href="assets/docs/Curriculo-Vinicius-Martins.pdf" download>Currículo</a>
+    <a (click)="openContactModal()">{{ 'CONTACT' | translate }}</a>
+    <select class="navbar--items--pc-options--translate"
+            [(ngModel)]="selectedLanguage"
+            (ngModelChange)="onChangeLanguage($event)"
+            name="language"
+            id="language-select-mobile">
+      <option value="en">en-US</option>
+      <option value="pt">pt-BR</option>
+    </select>
+    <a href="assets/docs/Curriculo-Vinicius-Martins.pdf" download>{{ 'CURRICULUM' | translate }}</a>
   </div>
 </div>
