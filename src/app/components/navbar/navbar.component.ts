@@ -56,16 +56,31 @@ export class NavbarComponent implements OnInit {
     this.isNavbarOpen = false;
   }
 
-  public downloadCurriculum(): void {
+  public openModal(): void {
     this.modalService.create({
       component: AboutMeComponent, inputs: {
-        message: 'DOWNLOAD-CURRICULUM'
+        message: ''
       }
     });
   }
 
+  public downloadCurriculum(): void {
+    const link = document.createElement('a');
+    let resume: string = '';
+
+    if (this.selectedLanguage === 'pt')
+      resume = 'assets/docs/Curriculo-Vinicius-Martins.pdf';
+    else
+      resume = 'assets/docs/Resume-Vinicius-Martins.pdf';
+
+    link.href = resume;
+    link.download = 'Vinicius-Martins.pdf';
+    link.click();
+  }
+
   public onChangeLanguage(language: string): void {
     this.translateService.use(language);
+    this.selectedLanguage = language;
   }
 
   //#endregion
