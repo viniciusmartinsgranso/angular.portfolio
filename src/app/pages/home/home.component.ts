@@ -96,12 +96,8 @@ export class HomeComponent {
     }
   }
 
-  public changeSlide(prevOrNext: number): void {
-    if (prevOrNext === -1) {
-      this.swiper.nativeElement.swiper.slidePrev();
-    } else {
-      this.swiper.nativeElement.swiper.slideNext();
-    }
+  public changeSlide(isPrev: boolean): void {
+    isPrev ? this.swiper.nativeElement.swiper.slidePrev() : this.swiper.nativeElement.swiper.slideNext()
   }
 
   //#endregion

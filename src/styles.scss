@@ -113,6 +113,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--darkest-purple);
-  outline: 1px solid slategrey;
+  outline: none;
   border-radius: 2rem;
 }
