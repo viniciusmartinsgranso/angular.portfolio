@@ -4,11 +4,12 @@
   "ABOUT-ME": "Acerca de mí",
   "PROJECTS": "Proyectos",
   "CONTACT": "Contacto",
-  "ABOUT-ONE": "Soy Ingeniero de Software Full Stack con más de 3 años de experiencia, graduado en Análisis y Desarrollo de Sistemas por la ESAMC - Sorocaba, y actualmente cursando Ingeniería en Computación en el Centro Universitario Facens. A lo largo de mi carrera, he participado en proyectos en diversos sectores como educación, agricultura y digitalización de la manufactura. Usando tecnologías como Angular, NestJS, React, C#, Jenkins y AWS, he contribuido en más de 10 proyectos con un enfoque en entregar soluciones robustas e innovadoras.",
+  "ABOUT-ONE": "Soy Ingeniero de Software Full Stack con más de 3 años de experiencia, graduado en Análisis y Desarrollo de Sistemas por la ESAMC - Sorocaba, y actualmente cursando Ingeniería en Computación en el Centro Universitario Facens. Usando tecnologías como Angular, NestJS, React, C#, Jenkins y AWS, he contribuido en más de 10 proyectos con un enfoque en entregar soluciones robustas e innovadoras.",
   "ABOUT-TWO": "Actualmente, trabajo en LIGA - FACENS, una Software House ubicada en Sorocaba, São Paulo - Brasil, donde estoy aprendiendo y esforzándome por crear soluciones innovadoras con experiencia y excelentes resultados.",
   "TECHNOLOGIES": "Constantemente motivado para crear soluciones y cambiar la vida de las personas, estas son algunas de las tecnologías con las que he trabajado:",
-  "WORKED-PROJECTS": "Cada proyecto en el que he trabajado",
+  "WORKED-PROJECTS": "Cada proyectos en el que he trabajado",
   "ALL": "Todos",
   "PERSONAL": "Personal",
-  "PROFESSIONAL": "Profesional"
+  "PROFESSIONAL": "Profesional",
+  "MOTIVATIONAL": "Puedo aceptar el fracaso, todos fallan en algo. Pero no puedo aceptar no intentarlo."
 }

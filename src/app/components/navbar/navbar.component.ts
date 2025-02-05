@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { NavbarInterface } from "../../modules/interfaces/navbar.interface";
 import { ModalService } from "../../services/modal.service";
 import { TranslateService } from "@ngx-translate/core";
+import { AboutMeComponent } from "../about-me/about-me.component";
 
 @Component({
   selector: 'app-navbar',
@@ -29,6 +30,10 @@ export class NavbarComponent implements OnInit {
       link: '/home#projects',
       name: 'PROJECTS'
     },
+    {
+      link: '/home#contact',
+      name: 'CONTACT'
+    },
   ];
 
   public isNavbarOpen: boolean = false;
@@ -51,7 +56,12 @@ export class NavbarComponent implements OnInit {
     this.isNavbarOpen = false;
   }
 
-  public openContactModal(): void {
+  public downloadCurriculum(): void {
+    this.modalService.create({
+      component: AboutMeComponent, inputs: {
+        message: 'DOWNLOAD-CURRICULUM'
+      }
+    });
   }
 
   public onChangeLanguage(language: string): void {

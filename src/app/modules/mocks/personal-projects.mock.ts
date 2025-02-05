@@ -30,15 +30,6 @@ export const personalProjects: ProjectInterface[] = [
     techs: [Technology.IONIC, Technology.NESTJS, Technology.ANGULAR],
   },
   {
-    name: 'Vinimail',
-    link: 'https://github.com/viniciusmartinsgranso/email/',
-    image: 'assets/images/build.png',
-    images: [],
-    description: 'Descrição',
-    type: ProjectTypeEnum.PERSONAL,
-    techs: [Technology.ANGULAR],
-  },
-  {
     name: 'Post-It',
     link: 'https://post-it-vini.vercel.app',
     description: 'Projeto criado durante o Bootcamp do LIGA - FACENS no período de 2022.',

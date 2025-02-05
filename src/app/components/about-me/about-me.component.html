@@ -1,3 +1,4 @@
-<h2>{{ title }}</h2>
-<p>{{ message }}</p>
-<button (click)="confirm()">Confirmar</button>
+<h2>{{ title | translate }}</h2>
+<p>{{ message | translate }}</p>
+<button (click)="decline()">{{ 'NO' | translate }}</button>
+<button (click)="accept()">{{ 'YES' | translate }}</button>

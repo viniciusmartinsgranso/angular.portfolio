@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { NavbarComponent } from './navbar.component';
 import { TranslatePipe } from "@ngx-translate/core";
 import { FormsModule } from "@angular/forms";
+import { AboutMeModule } from "../about-me/about-me.module";
 
 
 
@@ -16,6 +17,7 @@ import { FormsModule } from "@angular/forms";
     RouterLink,
     TranslatePipe,
     FormsModule,
+    AboutMeModule
   ],
   exports: [
     NavbarComponent

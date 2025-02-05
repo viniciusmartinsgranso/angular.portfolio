@@ -12,7 +12,14 @@ export class AboutMeComponent {
   @Input()
   public message: string = '';
 
-  confirm(): void {
-    alert('Confirmado!');
+  public accept(): void {
+    const link = document.createElement('a');
+    link.href = 'assets/docs/Curriculo-Vinicius-Martins.pdf';
+    link.download = 'Curriculo-Vinicius-Martins.pdf';
+    link.click();
+  }
+
+  public decline(): void {
+    alert('Declineado!');
   }
 }

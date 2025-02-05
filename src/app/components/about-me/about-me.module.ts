@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutMeComponent } from './about-me.component';
+import { TranslatePipe } from "@ngx-translate/core";
 
 
 
@@ -9,7 +10,8 @@ import { AboutMeComponent } from './about-me.component';
     AboutMeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TranslatePipe
   ],
   exports: [
     AboutMeComponent

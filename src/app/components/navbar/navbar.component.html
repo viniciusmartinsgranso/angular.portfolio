@@ -25,7 +25,6 @@
     <ng-container *ngFor="let item of navbarList">
       <a [href]="item.link" (click)="closeNavbar()">{{ item.name | translate }}</a>
     </ng-container>
-    <a (click)="openContactModal()">{{ 'CONTACT' | translate }}</a>
     <select class="navbar--items--pc-options--translate"
             [(ngModel)]="selectedLanguage"
             (ngModelChange)="onChangeLanguage($event)"
@@ -36,5 +35,6 @@
       <option value="es">Español</option>
     </select>
     <a href="assets/docs/Curriculo-Vinicius-Martins.pdf" download>{{ 'CURRICULUM' | translate }}</a>
+<!--    <a (click)="downloadCurriculum()">{{ 'CURRICULUM' | translate }}</a>-->
   </div>
 </div>
