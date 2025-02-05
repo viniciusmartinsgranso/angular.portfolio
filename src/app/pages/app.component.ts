@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 
   private readonly translateService: TranslateService = inject(TranslateService);
 
-  private supportedLanguages: string[] = ['en', 'pt'];
+  private supportedLanguages: string[] = ['en', 'pt', 'es'];
 
   //#endregion
 
