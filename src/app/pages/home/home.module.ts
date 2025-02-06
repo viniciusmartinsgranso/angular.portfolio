@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from "@angular/router";
 import { ProjectCardModule } from "../../components/project-card/project-card.module";
@@ -19,6 +19,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     ProjectCardModule,
     TranslatePipe,
+    NgOptimizedImage,
   ],
   exports: [
     HomeComponent

@@ -16,6 +16,8 @@ import { ProjectTypeEnum } from "../../modules/enums/project-type.enum";
 import { SwiperOptions } from "swiper/types";
 import { SwiperContainer } from "swiper/swiper-element";
 import { DeviceDetectorService } from "../../services/device-detector.service";
+import { ExperienceInterface } from "../../modules/interfaces/experience.interface";
+import { experiencesMock } from "../../modules/mocks/experiences-mock";
 
 @Component({
   selector: 'app-home',
@@ -56,6 +58,8 @@ export class HomeComponent {
   public technologies: string[] = technologiesMock;
 
   public projects: ProjectInterface[] = projects;
+
+  public experiences: ExperienceInterface[] = experiencesMock;
 
   public projectsFiltered: ProjectInterface[] = projects;
 

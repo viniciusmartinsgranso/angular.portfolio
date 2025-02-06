@@ -14,5 +14,14 @@
   "MOTIVATIONAL": "Eu posso aceitar a falha, todos falham em alguma coisa. Mas eu não posso aceitar não tentar.",
   "DOWNLOAD-CURRICULUM": "Deseja baixar meu currículo?",
   "YES": "Sim",
-  "NO": "Não"
+  "NO": "Não",
+  "EXPERIENCES": "Experiências",
+  "AGAPE-TITLE": "Estagiário no Ágape Saúde (Healthtech)",
+  "AGAPE-1": "• Criação de Help Desk interno utilizando a plataforma Atlassian para suporte dos colaboradores;",
+  "AGAPE-2": "• Implementação de inteligência artificial para atendimentos automáticos aos clientes e envio das respostas para Leads e direcionamento para o atendimento;",
+  "AGAPE-3": "• Responsável pela atualização e configuração dos computadores e servidores da companhia, atuando junto com o Help Desk criado.",
+  "LIGA-TITLE": "Desenvolvedor Fullstack no LIGA - Facens",
+  "LIGA-1": "• Desenvolver novas funcionalidades web (front e backend) com seus respectivos testes automatizados, respeitando as boas práticas de SOLID e Clean Code e os estágios definidos pela Metodologia Ágil;",
+  "LIGA-2": "• Desenvolvedor responsável por novas funcionalidades em sistemas Web em diversos projetos, realizando no front-end e as criando e integrando também no back-end;",
+  "LIGA-3": "• LIGA é uma Software House dentro de uma universidade, criando assim aplicações diversas e já participei de 6 projetos ao todo, com muitas áreas de aprendizado."
 }

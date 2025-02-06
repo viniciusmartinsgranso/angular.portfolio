@@ -27,12 +27,12 @@ export class NavbarComponent implements OnInit {
       name: 'ABOUT-ME'
     },
     {
-      link: '/home#projects',
-      name: 'PROJECTS'
+      link: '/home#experiences',
+      name: 'EXPERIENCES'
     },
     {
-      link: '/home#contact',
-      name: 'CONTACT'
+      link: '/home#projects',
+      name: 'PROJECTS'
     },
   ];
 

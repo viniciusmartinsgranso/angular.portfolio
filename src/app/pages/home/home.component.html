@@ -15,6 +15,20 @@
         <label>
           {{ 'ABOUT-TWO' | translate }}
         </label>
+        <div class="home--about-me--info--description--images">
+          <a href="https://linkedin.com/in/vinicius-martins-granso" target="_blank">
+            <img ngSrc="assets/images/linkedin.svg" alt="LinkedIn" height="24" width="24">
+          </a>
+          <a href="https://github.com/viniciusmartinsgranso" target="_blank">
+            <img ngSrc="assets/images/github.svg" alt="Github" height="24" width="24">
+          </a>
+          <a href="https://wa.me/5515996920047" target="_blank">
+            <img ngSrc="assets/images/whatsapp.svg" alt="Whatsapp" height="24" width="24">
+          </a>
+          <a href="mailto:viniciusmartinsg@hotmail.com" target="_blank">
+            <img ngSrc="assets/images/email.svg" alt="E-mail" height="24" width="24">
+          </a>
+        </div>
       </div>
 
       <div class="home--about-me--info--technologies">
@@ -32,6 +46,22 @@
           </ng-container>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div id="experiences">
+    <h1 class="home--about-me--text">{{ 'EXPERIENCES' | translate }}</h1>
+    <div class="home--about-me--info">
+      @for (experience of experiences; track experience.title) {
+        <div class="home--about-me--info--description">
+          <h3>{{ experience.title | translate }}</h3>
+          <div class="home--experience">
+            @for (description of experience.description; track description) {
+              <label>{{ description | translate }}</label>
+            }
+          </div>
+        </div>
+      }
     </div>
   </div>
 

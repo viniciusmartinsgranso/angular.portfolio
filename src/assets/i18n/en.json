@@ -14,5 +14,14 @@
   "MOTIVATIONAL": "I can accept failure, everyone fails at something. But I can't accept not trying.",
   "DOWNLOAD-CURRICULUM": "Do you really want to download my curriculum?",
   "YES": "Yes",
-  "NO": "No"
+  "NO": "No",
+  "EXPERIENCES": "Experiences",
+  "AGAPE-TITLE": "Intern at Ágape Saúde (Healthtech)",
+  "AGAPE-1": "• Creation of an internal Help Desk using the Atlassian platform to support employees;",
+  "AGAPE-2": "• Implementation of artificial intelligence for automatic customer support and response forwarding to Leads, directing them to the appropriate channels",
+  "AGAPE-3": "• Responsible for updating and configuring the company's computers and servers, working in conjunction with the created Help Desk.",
+  "LIGA-TITLE": "Desenvolvedor Fullstack no LIGA - Facens",
+  "LIGA-1": "• Developing new web functionalities (front and backend) along with their respective automated tests, adhering to SOLID principles and Clean Code practices, and following the defined stages of Agile Methodology, with a focus on NestJs and Angular Framework technologies;",
+  "LIGA-2": "• Developer responsible for implementing new functionalities in web systems across various projects, working on both front-end and back-end aspects;",
+  "LIGA-3": "• LIGA is a Software House within a university, developing various applications, and I have participated in a total of 8 projects, covering a wide range of learning areas."
 }
