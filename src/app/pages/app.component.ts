@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { TranslateService } from "@ngx-translate/core";
 import { LanguagesEnum, translatedLanguages } from "../modules/enums/languages.enum";
+import { injectSpeedInsights } from "@vercel/speed-insights";
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,8 @@ export class AppComponent implements OnInit {
   //#region Public Methods
 
   public ngOnInit(): void {
+    injectSpeedInsights();
+
     this.userLocale = navigator.language as LanguagesEnum;
 
     if (!this.supportedLanguages.includes(translatedLanguages[this.userLocale])) {

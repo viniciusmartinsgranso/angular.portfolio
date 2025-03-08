@@ -4,6 +4,8 @@ import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from "@angular/router";
 import { ProjectCardModule } from "../../components/project-card/project-card.module";
 import { TranslatePipe } from "@ngx-translate/core";
+import { ScrollAnimDirective } from "../../directives/scroll-anim.directive";
+import { FooterComponent } from "../../components/footer/footer.component";
 
 
 const routes: Routes = [
@@ -20,6 +22,8 @@ const routes: Routes = [
     ProjectCardModule,
     TranslatePipe,
     NgOptimizedImage,
+    ScrollAnimDirective,
+    FooterComponent,
   ],
   exports: [
     HomeComponent

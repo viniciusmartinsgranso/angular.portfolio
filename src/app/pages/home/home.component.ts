@@ -18,11 +18,46 @@ import { SwiperContainer } from "swiper/swiper-element";
 import { DeviceDetectorService } from "../../services/device-detector.service";
 import { ExperienceInterface } from "../../modules/interfaces/experience.interface";
 import { experiencesMock } from "../../modules/mocks/experiences-mock";
+import { animate, state, style, transition, trigger } from "@angular/animations";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('animTrigger', [
+      state('left', style({ transform: 'translateX(0)', opacity: 1 })),
+      state('right', style({ transform: 'translateX(0)', opacity: 1 })),
+      state('fade', style({ opacity: 1 })),
+      state('top', style({ transform: 'translateY(0)', opacity: 1 })),
+      state('bottom', style({ transform: 'translateY(0)', opacity: 1 })),
+
+      transition('* => left', [
+        style({ transform: 'translateX(-100%)', opacity: 0 }),
+        animate('{{duration}} ease-out')
+      ], { params: { duration: '1s' } }),
+
+      transition('* => right', [
+        style({ transform: 'translateX(100%)', opacity: 0 }),
+        animate('{{duration}} ease-out')
+      ], { params: { duration: '1s' } }),
+
+      transition('* => fade', [
+        style({ opacity: 0 }),
+        animate('{{duration}} ease-in')
+      ], { params: { duration: '1s' } }),
+
+      transition('* => top', [
+        style({ transform: 'translateY(-100%)', opacity: 0 }),
+        animate('{{duration}} ease-out')
+      ], { params: { duration: '1s' } }),
+
+      transition('* => bottom', [
+        style({ transform: 'translateY(100%)', opacity: 0 }),
+        animate('{{duration}} ease-out')
+      ], { params: { duration: '1s' } })
+    ])
+  ]
 })
 export class HomeComponent {
 

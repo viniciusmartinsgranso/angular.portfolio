@@ -157,6 +157,15 @@
   }
 }
 
+app-footer {
+  width: 100%;
+  text-align: center;
+
+  padding: 2rem;
+  background: var(--dark-purple);
+  border-radius: 2rem;
+}
+
 .active {
   background: var(--dark-purple);
 }

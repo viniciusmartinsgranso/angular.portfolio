@@ -6,7 +6,10 @@
   <div class="home--about-me" id="about">
     <h1 class="home--about-me--text">{{ 'ABOUT-ME' | translate }}</h1>
     <div class="home--about-me--info">
-      <div class="home--about-me--info--description">
+      <div class="home--about-me--info--description"
+           scrollAnim="left"
+           animDuration="1.5s"
+           style="opacity: 0;">
         <img class="home--about-me--info--description--me" src="assets/images/eu.jpeg">
         <label>
           {{ 'ABOUT-ONE' | translate }}
@@ -31,19 +34,29 @@
         </div>
       </div>
 
-      <div class="home--about-me--info--technologies">
+      <div class="home--about-me--info--technologies"
+           scrollAnim="right"
+           animDuration="1.5s"
+           style="opacity: 0;">
         <div class="home--about-me--info--technologies--motivation">
           <h3>{{ 'MOTIVATIONAL' | translate }}</h3>
           <label>-Michael Jordan</label>
         </div>
         <div class="divider"></div>
-        <label>
+        <label scrollAnim="top"
+               animDuration="3s"
+               animEasing="ease-in"
+               style="opacity: 0;">
           {{ 'TECHNOLOGIES' | translate }}
         </label>
         <div class="home--about-me--info--technologies--list">
-          <ng-container *ngFor="let tec of technologies">
-            <img [src]="tec" alt="">
-          </ng-container>
+          @for (tec of technologies; track tec; let i = $index) {
+            <img scrollAnim="top"
+                 [animDuration]="i + 1 + 's'"
+                 animEasing="ease-in"
+                 style="opacity: 0;"
+                 [src]="tec" alt="">
+          }
         </div>
       </div>
     </div>
@@ -52,8 +65,11 @@
   <div id="experiences">
     <h1 class="home--about-me--text">{{ 'EXPERIENCES' | translate }}</h1>
     <div class="home--about-me--info">
-      @for (experience of experiences; track experience.title) {
-        <div class="home--about-me--info--description">
+      @for (experience of experiences; track experience.title; let i = $index) {
+        <div class="home--about-me--info--description"
+             [scrollAnim]="i === 0 ? 'left' : 'right'"
+             animDuration="1.5s"
+             style="opacity: 0;">
           <h3>{{ experience.title | translate }}</h3>
           <div class="home--experience">
             @for (description of experience.description; track description) {
