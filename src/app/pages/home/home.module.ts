@@ -6,6 +6,7 @@ import { ProjectCardModule } from "../../components/project-card/project-card.mo
 import { TranslatePipe } from "@ngx-translate/core";
 import { ScrollAnimDirective } from "../../directives/scroll-anim.directive";
 import { FooterComponent } from "../../components/footer/footer.component";
+import { ProjectModalComponent } from "../../modals/project-modal/project-modal.component";
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
     NgOptimizedImage,
     ScrollAnimDirective,
     FooterComponent,
+    ProjectModalComponent
   ],
   exports: [
     HomeComponent

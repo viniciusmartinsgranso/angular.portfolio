@@ -50,7 +50,6 @@ export class ModalService {
       environmentInjector: this.appRef.injector,
     });
 
-    // Define os inputs do componente
     if (options.inputs) {
       Object.entries(options.inputs).forEach(([key, value]) => {
         this.modalRef!.instance[key] = value;
@@ -59,7 +58,8 @@ export class ModalService {
 
     this.appRef.attachView(this.modalRef.hostView);
 
-    // Anexa o componente ao modal
+    // Adiciona classe para ativar a animação
+    modalContent.style.animation = 'modalFadeIn 0.5s ease-out';
     modalContent.appendChild((this.modalRef.hostView as any).rootNodes[0]);
     this.modalContainer.appendChild(modalContent);
 
@@ -69,14 +69,22 @@ export class ModalService {
 
   public destroy(): void {
     if (this.modalRef) {
-      this.appRef.detachView(this.modalRef.hostView);
-      this.modalRef.destroy();
-      this.modalRef = undefined;
-
-      if (this.modalContainer) {
-        this.modalContainer.remove();
-        this.modalContainer = undefined;
+      // Inicia a animação de saída
+      const modalContent = this.modalContainer?.querySelector('.modal-content') as HTMLElement;
+      if (modalContent) {
+        modalContent.style.animation = 'modalFadeOut 0.5s ease-in';
       }
+
+      setTimeout(() => {
+        this.appRef.detachView(this.modalRef!.hostView);
+        this.modalRef!.destroy();
+        this.modalRef = undefined;
+
+        if (this.modalContainer) {
+          this.modalContainer.remove();
+          this.modalContainer = undefined;
+        }
+      }, 500); // Tempo da animação
     }
   }
 

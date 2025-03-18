@@ -19,6 +19,7 @@ import { DeviceDetectorService } from "../../services/device-detector.service";
 import { ExperienceInterface } from "../../modules/interfaces/experience.interface";
 import { experiencesMock } from "../../modules/mocks/experiences-mock";
 import { animate, state, style, transition, trigger } from "@angular/animations";
+import { ProjectModalComponent } from "../../modals/project-modal/project-modal.component";
 
 @Component({
   selector: 'app-home',
@@ -117,7 +118,11 @@ export class HomeComponent {
   }
 
   public openProject(project: ProjectInterface): void {
-    console.log('');
+    this.modalService.create({
+      component: ProjectModalComponent, inputs: {
+        project
+      },
+    });
   }
 
   public topFunction(): void {
