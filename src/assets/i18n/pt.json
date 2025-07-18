@@ -5,7 +5,7 @@
   "PROJECTS": "Projetos",
   "CONTACT": "Contato",
   "ABOUT-ONE": "Sou Engenheiro de Software Full Stack com mais de 3 anos de experiência, formado em Análise e Desenvolvimento de Sistemas pela ESAMC - Sorocaba e cursando Engenharia da Computação pelo Centro Universitário Facens. Utilizando tecnologias como Angular, NestJS, React, C#, Jenkins e AWS participei de mais de 10 projetos com foco em entregar soluções robustas e inovadoras.",
-  "ABOUT-TWO": "Atualmente, estou trabalhando no LIGA - FACENS, uma Software House localizada em Sorocaba, São Paulo - Brasil, onde estou aprendendo e me esforçando para criar soluções inovadoras com expertise e grandes resultados.",
+  "ABOUT-TWO": "Atualmente, estou trabalhando na TOTVS como desenvolvedor front-end, localizada em São Paulo, São Paulo - Brasil, onde estou aprendendo e me esforçando para criar soluções inovadoras com expertise e grandes resultados.",
   "TECHNOLOGIES": "Sendo motivado constantemente em criar soluções e mudar a vida das pessoas, essas são algumas das tecnologias que já trabalhei:",
   "WORKED-PROJECTS": "Alguns dos projetos que já participei.",
   "ALL": "Todos",
@@ -16,12 +16,16 @@
   "YES": "Sim",
   "NO": "Não",
   "EXPERIENCES": "Experiências",
+  "TOTVS-TITLE": "Desenvolvedor Front-End na TOTVS (SaaS)",
+  "TOTVS-1": "• Atuação na resolução de débitos técnicos e desenvolvimento de novas funcionalidades em aplicações web, com foco em qualidade e boas práticas de código (SOLID e Clean Code), dentro de times ágeis;",
+  "TOTVS-2": "• Desenvolvimento de smoke tests E2E com Cypress, garantindo estabilidade e confiabilidade das entregas;",
+  "TOTVS-3": "• Implementação de testes unitários com Jest, atingindo 100% de cobertura exigida pela plataforma SonarCloud.",
   "AGAPE-TITLE": "Estagiário no Ágape Saúde (Healthtech)",
   "AGAPE-1": "• Criação de Help Desk interno utilizando a plataforma Atlassian para suporte dos colaboradores;",
   "AGAPE-2": "• Implementação de inteligência artificial para atendimentos automáticos aos clientes e envio das respostas para Leads e direcionamento para o atendimento;",
   "AGAPE-3": "• Responsável pela atualização e configuração dos computadores e servidores da companhia, atuando junto com o Help Desk criado.",
   "LIGA-TITLE": "Desenvolvedor Fullstack no LIGA - Facens",
-  "LIGA-1": "• Desenvolver novas funcionalidades web (front e backend) com seus respectivos testes automatizados, respeitando as boas práticas de SOLID e Clean Code e os estágios definidos pela Metodologia Ágil;",
-  "LIGA-2": "• Desenvolvedor responsável por novas funcionalidades em sistemas Web em diversos projetos, realizando no front-end e as criando e integrando também no back-end;",
-  "LIGA-3": "• LIGA é uma Software House dentro de uma universidade, criando assim aplicações diversas e já participei de mais ed 10 projetos, com muitas áreas de aprendizado."
+  "LIGA-1": "• Desenvolvimento de novas funcionalidades web (front e back-end) com testes automatizados, seguindo boas práticas de SOLID, Clean Code e Metodologia Ágil;",
+  "LIGA-2": "• Responsável por implementar e integrar funcionalidades em sistemas web, atuando em diversos projetos;",
+  "LIGA-3": "• Treinamento e acompanhamento de novos colaboradores, auxiliando na integração ao time e suporte técnico."
 }

@@ -4,5 +4,4 @@ import { professionalProjectsMock } from "./professional-projects.mock";
 
 export const projects: ProjectInterface[] = [
   ...professionalProjectsMock,
-  ...personalProjects,
 ];

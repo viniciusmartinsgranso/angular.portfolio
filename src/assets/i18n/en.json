@@ -16,12 +16,17 @@
   "YES": "Yes",
   "NO": "No",
   "EXPERIENCES": "Experiences",
-  "AGAPE-TITLE": "Intern at Ágape Saúde (Healthtech)",
+  "TOTVS-TITLE": "Front-End Developer @ TOTVS (SaaS)",
+  "TOTVS-1": "• Working on technical debt resolution and development of new web functionalities, focused on quality and code standards (SOLID and Clean Code) in agile teams;",
+  "TOTVS-2": "• Development of E2E smoke tests using Cypress to ensure stability and reliability of deliveries;",
+  "TOTVS-3": "• Implementation of unit tests with Jest, achieving 100% coverage required by SonarCloud.",
+  "AGAPE-TITLE": "Intern @ Ágape Saúde (Healthtech)",
   "AGAPE-1": "• Creation of an internal Help Desk using the Atlassian platform to support employees;",
   "AGAPE-2": "• Implementation of artificial intelligence for automatic customer support and response forwarding to Leads, directing them to the appropriate channels",
   "AGAPE-3": "• Responsible for updating and configuring the company's computers and servers, working in conjunction with the created Help Desk.",
-  "LIGA-TITLE": "Fullstack Engineer at LIGA - Facens",
-  "LIGA-1": "• Developing new web functionalities (front and backend) along with their respective automated tests, adhering to SOLID principles and Clean Code practices, and following the defined stages of Agile Methodology, with a focus on NestJs and Angular Framework technologies;",
+  "LIGA-TITLE": "Fullstack Engineer @ LIGA - Facens",
+  "LIGA-1": "• Development of new web features (front and back-end) with automated tests, following best practices of SOLID, Clean Code, and Agile methodology, with a focus on NestJs and Angular Framework technologies;",
   "LIGA-2": "• Developer responsible for implementing new functionalities in web systems across various projects, working on both front-end and back-end aspects;",
-  "LIGA-3": "• LIGA is a Software House within a university, developing various applications, and I have participated more than 10 projects, covering a wide range of learning areas."
+  "LIGA-3": "• Training and supporting new team members, assisting with onboarding and technical guidance.",
+  "LIGA-4": "• LIGA is a Software House within a university, developing various applications, and I have participated more than 10 projects, covering a wide range of learning areas."
 }

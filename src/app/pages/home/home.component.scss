@@ -19,6 +19,7 @@
       justify-content: center;
       gap: 8rem;
       margin-top: 2rem;
+      flex-wrap: wrap;
 
       &--technologies {
         display: flex;
@@ -109,6 +110,7 @@
 
     &--header {
       border-bottom: 0.1rem solid grey;
+      margin-bottom: 1rem;
 
       &--title {
         font-weight: bold;

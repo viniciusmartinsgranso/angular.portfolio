@@ -16,12 +16,17 @@
   "YES": "Sí",
   "NO": "No",
   "EXPERIENCES": "Experiencias",
+  "TOTVS-TITLE": "Desarrollador Front-End en TOTVS (SaaS)",
+  "TOTVS-1": "• Resolución de deudas técnicas y desarrollo de nuevas funcionalidades web, con enfoque en calidad y buenas prácticas de código (SOLID y Clean Code) dentro de equipos ágiles;",
+  "TOTVS-2": "• Desarrollo de pruebas E2E tipo smoke test utilizando Cypress para asegurar la estabilidad y confiabilidad de las entregas;",
+  "TOTVS-3": "• Implementación de pruebas unitarias con Jest, alcanzando el 100% de cobertura requerida por SonarCloud.",
   "AGAPE-TITLE": "Interno en Ágape Saúde (Healthtech)",
   "AGAPE-1": "• Creación de un Help Desk interno utilizando la plataforma Atlassian para apoyar a los empleados;",
   "AGAPE-2": "• Implementación de inteligencia artificial para soporte automático al cliente y reenvío de respuestas a Leads, dirigiéndolos a los canales adecuados",
   "AGAPE-3": "• Responsable de actualizar y configurar los equipos y servidores de la empresa, trabajando en conjunto con el Help Desk creado.",
   "LIGA-TITLE": "Desarrollador Fullstack en LIGA - Facens",
-  "LIGA-1": "• Desarrollo de nuevas funcionalidades web (front y backend) junto con sus respectivos tests automatizados, siguiendo los principios SOLID y las prácticas de Clean Code, y siguiendo las etapas definidas de la Metodología Ágil, con un enfoque en las tecnologías NestJs y Angular Framework;",
-  "LIGA-2": "• Desarrollador responsable de implementar nuevas funcionalidades en sistemas web en varios proyectos, trabajando tanto en el front-end como en el back-end;",
-  "LIGA-3": "• LIGA es una Software House dentro de una universidad, desarrollando diversas aplicaciones, y he participado en un total de 10 proyectos, cubriendo una amplia gama de áreas de aprendizaje."
+  "LIGA-1": "• Desarrollo de nuevas funcionalidades web (front-end y back-end) con pruebas automatizadas, siguiendo buenas prácticas de SOLID, Clean Code y metodología Ágil, con un enfoque en las tecnologías NestJs y Angular Framework;",
+  "LIGA-2": "• Responsable de implementar e integrar funcionalidades en sistemas web en diversos proyectos;, trabajando tanto en el front-end como en el back-end;",
+  "LIGA-3": "• Capacitación y acompañamiento de nuevos integrantes del equipo, brindando soporte técnico e integración al equipo.",
+  "LIGA-4": "• LIGA es una Software House dentro de una universidad, desarrollando diversas aplicaciones, y he participado en un total de 10 proyectos, cubriendo una amplia gama de áreas de aprendizaje."
 }
