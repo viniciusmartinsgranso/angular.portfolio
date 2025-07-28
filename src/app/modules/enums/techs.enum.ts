@@ -1,4 +1,4 @@
-export enum Technology {
+export enum TechnologyEnum {
   ANGULAR = 'Angular',
   IONIC = 'Ionic',
   REACT = 'React',

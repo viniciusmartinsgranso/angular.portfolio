@@ -1,0 +1,30 @@
+<div class="dropdown">
+  <button class="dropdown--toggle" (click)="toggleDropdown()">
+    {{ selectedLabel }} <span>{{ isOpen ? '▲' : '▼' }}</span>
+  </button>
+
+  @if (isOpen) {
+    <div class="dropdown--menu">
+
+      <label class="dropdown--menu--option" (click)="selectAll()">
+        {{ 'ALL' | translate }}
+      </label>
+      @for (option of options; track option) {
+        <label class="dropdown--menu--option">
+          <input
+            type="checkbox"
+            [checked]="isSelected(option)"
+            (change)="toggleOption(option)"
+          />
+          {{ option }}
+        </label>
+      }
+
+      <div class="dropdown--menu--actions">
+        <button class="dropdown--menu--actions--apply" [class.disabled]="!tempSelected.length" (click)="applySelection()">{{ 'APPLY' | translate }}</button>
+        <button class="dropdown--menu--actions--cancel" (click)="cancelSelection()">{{ 'CANCEL' | translate }}</button>
+      </div>
+    </div>
+  }
+
+</div>

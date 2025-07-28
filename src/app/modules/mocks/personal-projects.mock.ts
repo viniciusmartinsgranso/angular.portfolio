@@ -1,6 +1,6 @@
 import { ProjectTypeEnum } from "../enums/project-type.enum";
 import { ProjectInterface } from "../interfaces/project.interface";
-import { Technology } from "../enums/techs.enum";
+import { TechnologyEnum } from "../enums/techs.enum";
 
 export const personalProjects: ProjectInterface[] = [
   {
@@ -15,7 +15,7 @@ export const personalProjects: ProjectInterface[] = [
       '\n' +
       'Aplicativo feito em Ionic com Angular Framework e atualmente com dados mockados, sendo utilizado o localstorage para o alocamento de informações.',
     type: ProjectTypeEnum.PERSONAL,
-    techs: [Technology.IONIC],
+    techs: [TechnologyEnum.IONIC],
   },
   {
     name: 'Help Us',
@@ -27,7 +27,7 @@ export const personalProjects: ProjectInterface[] = [
       '\n' +
       'Aplicativo feito em Ionic com Angular Framework e atualmente com dados mockados, sendo utilizado o localstorage para o alocamento de informações.',
     type: ProjectTypeEnum.PERSONAL,
-    techs: [Technology.IONIC, Technology.NESTJS, Technology.ANGULAR],
+    techs: [TechnologyEnum.IONIC, TechnologyEnum.NESTJS, TechnologyEnum.ANGULAR],
   },
   {
     name: 'Post-It',
@@ -36,6 +36,6 @@ export const personalProjects: ProjectInterface[] = [
     image: 'assets/images/build.png',
     images: [],
     type: ProjectTypeEnum.PERSONAL,
-    techs: [Technology.ANGULAR, Technology.NESTJS, Technology.IONIC],
+    techs: [TechnologyEnum.ANGULAR, TechnologyEnum.NESTJS, TechnologyEnum.IONIC],
   },
 ]

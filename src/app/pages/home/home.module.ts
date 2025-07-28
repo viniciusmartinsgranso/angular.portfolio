@@ -7,6 +7,8 @@ import { TranslatePipe } from "@ngx-translate/core";
 import { ScrollAnimDirective } from "../../directives/scroll-anim.directive";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { ProjectModalComponent } from "../../modals/project-modal/project-modal.component";
+import { MultiselectOptionsComponent } from "../../components/multiselect-options/multiselect-options.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 const routes: Routes = [
@@ -17,16 +19,18 @@ const routes: Routes = [
   declarations: [
     HomeComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    ProjectCardModule,
-    TranslatePipe,
-    NgOptimizedImage,
-    ScrollAnimDirective,
-    FooterComponent,
-    ProjectModalComponent
-  ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        ProjectCardModule,
+        TranslatePipe,
+        NgOptimizedImage,
+        ScrollAnimDirective,
+        FooterComponent,
+        ProjectModalComponent,
+        MultiselectOptionsComponent,
+        ReactiveFormsModule
+    ],
   exports: [
     HomeComponent
   ],

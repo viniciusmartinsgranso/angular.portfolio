@@ -12,7 +12,6 @@ import { ProjectInterface } from "../../modules/interfaces/project.interface";
 import { projects } from "../../modules/mocks/projects";
 import { technologiesMock } from "../../modules/mocks/technologies.mock";
 import { ModalService } from "../../services/modal.service";
-import { ProjectTypeEnum } from "../../modules/enums/project-type.enum";
 import { SwiperOptions } from "swiper/types";
 import { SwiperContainer } from "swiper/swiper-element";
 import { DeviceDetectorService } from "../../services/device-detector.service";
@@ -20,6 +19,7 @@ import { ExperienceInterface } from "../../modules/interfaces/experience.interfa
 import { experiencesMock } from "../../modules/mocks/experiences-mock";
 import { animate, state, style, transition, trigger } from "@angular/animations";
 import { ProjectModalComponent } from "../../modals/project-modal/project-modal.component";
+import { TechnologyEnum } from "../../modules/enums/techs.enum";
 
 @Component({
   selector: 'app-home',
@@ -99,9 +99,9 @@ export class HomeComponent {
 
   public projectsFiltered: ProjectInterface[] = projects;
 
-  public listProjectType: ProjectTypeEnum[] = Object.values(ProjectTypeEnum);
+  public listProjectType: TechnologyEnum[] = Object.values(TechnologyEnum);
 
-  public selectedProjectFilter: ProjectTypeEnum = ProjectTypeEnum.ALL;
+  public selectedFrameworks: TechnologyEnum[] = [];
 
   public slideConfig: SwiperOptions = {
     slidesPerView: this.deviceDetectorService.isMobile() ? 1 : 3,
@@ -130,14 +130,18 @@ export class HomeComponent {
     this.doc.documentElement.scrollTop = 0;
   }
 
-  public filterProjectByType(type: ProjectTypeEnum): void {
-    this.selectedProjectFilter = type;
-
-    if (type === ProjectTypeEnum.ALL) {
-      this.projectsFiltered = this.projects;
-    } else {
-      this.projectsFiltered = this.projects.filter(project => project.type === type);
+  public filterProjectByType(values: TechnologyEnum[] | null): void {
+    if (!values || !values.length) {
+      this.selectedFrameworks = [];
+      this.projectsFiltered = [...this.projects];
+      return;
     }
+
+    this.selectedFrameworks = values;
+
+    this.projectsFiltered = this.projects.filter((project) =>
+      values.some((value) => project.techs.includes(value))
+    );
   }
 
   public changeSlide(isPrev: boolean): void {

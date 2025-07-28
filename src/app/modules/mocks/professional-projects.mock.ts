@@ -1,6 +1,6 @@
 import { ProjectInterface } from "../interfaces/project.interface";
 import { ProjectTypeEnum } from "../enums/project-type.enum";
-import { Technology } from "../enums/techs.enum";
+import { TechnologyEnum } from "../enums/techs.enum";
 
 export const professionalProjectsMock: ProjectInterface[] = [
   {
@@ -10,7 +10,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/terrex-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR, Technology.IONIC, Technology.NESTJS],
+    techs: [TechnologyEnum.ANGULAR, TechnologyEnum.IONIC, TechnologyEnum.NESTJS],
   },
   {
     name: 'Sama',
@@ -19,7 +19,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/sama-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.IONIC],
+    techs: [TechnologyEnum.IONIC],
   },
   {
     name: 'WEC Cabos',
@@ -28,7 +28,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/wec-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR, Technology.NESTJS],
+    techs: [TechnologyEnum.ANGULAR, TechnologyEnum.NESTJS],
   },
   {
     name: 'UQR',
@@ -37,7 +37,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/uqr-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR],
+    techs: [TechnologyEnum.ANGULAR],
   },
   {
     name: 'IQR',
@@ -46,7 +46,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/iqr-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR],
+    techs: [TechnologyEnum.ANGULAR],
   },
   {
     name: 'Unicorporativa',
@@ -55,7 +55,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/unicorp-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR, Technology.NESTJS],
+    techs: [TechnologyEnum.ANGULAR, TechnologyEnum.NESTJS],
   },
   {
     name: 'NCursos',
@@ -64,7 +64,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/ncursos-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR, Technology.NESTJS],
+    techs: [TechnologyEnum.ANGULAR, TechnologyEnum.NESTJS],
   },
   {
     name: 'B2Bee',
@@ -73,7 +73,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/b2bee-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR, Technology.NESTJS],
+    techs: [TechnologyEnum.ANGULAR, TechnologyEnum.NESTJS],
   },
   {
     name: 'Sandbox',
@@ -82,7 +82,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/sandbox-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.GAMES],
+    techs: [TechnologyEnum.GAMES],
   },
   {
     name: 'Tintim',
@@ -91,7 +91,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/tintim-logo.jpg',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR, Technology.IONIC, Technology.NESTJS],
+    techs: [TechnologyEnum.ANGULAR, TechnologyEnum.IONIC, TechnologyEnum.NESTJS],
   },
   {
     name: 'SITS',
@@ -100,7 +100,7 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/build.png',
     images: [],
     description: '',
-    techs: [Technology.REACT, Technology.DOTNET],
+    techs: [TechnologyEnum.REACT, TechnologyEnum.DOTNET],
   },
   {
     name: 'Gestor de Conteúdos',
@@ -109,6 +109,6 @@ export const professionalProjectsMock: ProjectInterface[] = [
     image: 'assets/images/build.png',
     images: [],
     description: '',
-    techs: [Technology.ANGULAR, Technology.DOTNET],
+    techs: [TechnologyEnum.ANGULAR, TechnologyEnum.DOTNET],
   },
 ];

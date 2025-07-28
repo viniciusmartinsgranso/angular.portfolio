@@ -88,12 +88,11 @@
     </div>
 
     <div class="home--project--filter">
-      <ng-container *ngFor="let type of listProjectType">
-        <div class="home--project--filter--item" [class.active]="selectedProjectFilter === type"
-             (click)="filterProjectByType(type)">
-          <span>{{ type | translate }}</span>
-        </div>
-      </ng-container>
+      <app-multiselect (selectionChange)="filterProjectByType($event)"
+                       [selected]="selectedFrameworks"
+                       [options]="listProjectType"
+      />
+
     </div>
 
     <div class="home--project--list">
